@@ -151,11 +151,11 @@ class TransGirls(object):
             if blocked_word in post['blog_name']:
                 return False
 
-        case_insenstive_tags = set(tag.lower() for tag in post['tags'])
+        case_insensitive_tags = set(tag.lower() for tag in post['tags'])
 
         # if posts contains any tags in the blacklist, ignore it
         tags_are_naughty = len(
-            case_insenstive_tags & trans_girls_rule_the_world.settings.BLACKLIST
+            case_insensitive_tags & trans_girls_rule_the_world.settings.BLACKLIST
         )
 
         # if text of post contains any text in the blacklist, ignore it
